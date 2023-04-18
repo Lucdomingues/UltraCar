@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/UltraCar/static/css/main.790c8e67.css",
-    "main.js": "/UltraCar/static/js/main.8b7b2b5c.js",
+    "main.js": "/UltraCar/static/js/main.9fd220db.js",
     "index.html": "/UltraCar/index.html",
     "main.790c8e67.css.map": "/UltraCar/static/css/main.790c8e67.css.map",
-    "main.8b7b2b5c.js.map": "/UltraCar/static/js/main.8b7b2b5c.js.map"
+    "main.9fd220db.js.map": "/UltraCar/static/js/main.9fd220db.js.map"
   },
   "entrypoints": [
     "static/css/main.790c8e67.css",
-    "static/js/main.8b7b2b5c.js"
+    "static/js/main.9fd220db.js"
   ]
 }
