@@ -1,0 +1,43 @@
+.client-details {
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.client-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.client-details p {
+  margin-bottom: 5px;
+}
+
+.car-details {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.car-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.car-details li {
+  margin-bottom: 20px;
+}
+
+.car-details p {
+  margin-bottom: 5px;
+}
+
+.service-form {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.service-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}

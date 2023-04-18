@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import AppContext from '../Context/Context';
 import {customerVehicle} from '../Database/mock/Api.mock';
 import ServiceForm from '../Components/ServiceForm';
+import Header from '../Components/Header';
+import '../Css/InfoClient.css'
 
 const InfoClient = () => {
     const { setCar, client  } = useContext(AppContext);
@@ -17,14 +19,15 @@ const InfoClient = () => {
 
     return (
         <div>
-            <div>
+            <Header />
+            <div className="client-details">
                 <h2>Detalhes do cliente</h2>
                 <p>ID: {client.id}</p>
                 <p>Nome: {client.nome}</p>
                 <p>Email: {client.email}</p>
                 <p>Cpf: {client.cpf}</p>
             </div>
-            <div>
+            <div className="car-details">
                 <ul>
                     <h2>Detalhes do carro:</h2>
                     {data.map((car) => (

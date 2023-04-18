@@ -1,0 +1,56 @@
+/* Estilos para a lista de serviços */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul li h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+ul li p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+ul li p:first-of-type {
+  margin-top: 0;
+}
+
+ul li ul {
+  margin-top: 10px;
+}
+
+ul li ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para os botões de ação */
+ul li button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+ul li button:hover {
+  background-color: #0062cc;
+}

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { clientUser } from "../Database/mock/Api.mock";
 import AppContext from "../Context/Context";
+import '../Css/Login.css';
 
 const Login = () => {
     const history = useHistory();
@@ -30,11 +31,6 @@ const Login = () => {
         }
     };
 
-    // const logout = () => {
-    //     // Aqui, podemos simplesmente limpar o estado do contexto para deslogar o cliente.
-    //     setClient(null);
-    // };
-
     const handleSubmit = (event) => {
         event.preventDefault();
         login(cpf);
@@ -42,13 +38,15 @@ const Login = () => {
 
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Cpf:
-                <input type="text" value={cpf} onChange={(event) => setCpf(event.target.value)} required />
-            </label>
-            <button type="submit">Entrar</button>
-        </form>
+        <>
+            <form className="login-form" onSubmit={handleSubmit}>
+                <label>
+                    Cpf:
+                    <input type="text" value={cpf} onChange={(event) => setCpf(event.target.value)} required />
+                </label>
+                <button type="submit">Entrar</button>
+            </form>
+        </>
     );
 };
 

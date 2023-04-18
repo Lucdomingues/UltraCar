@@ -16,17 +16,17 @@ export const customerVehicle = [{
     capacidade_de_passageiros: 5,
     cor: 'Vermelho Alpine',
 },
-//     {
-//         id: 2,
-//         clientId: 1,
-//         marca: 'Fiat',
-//         modelo: 'Toro',
-//         ano: 2022,
-//         numero_de_portas: 4,
-//         tipo_de_carroceria: 'Pick-up',
-//         capacidade_de_passageiros: 5,
-//         cor: 'Preto Carbon',
-// }
+    {
+        id: 2,
+        clientId: 1,
+        marca: 'Fiat',
+        modelo: 'Toro',
+        ano: 2022,
+        numero_de_portas: 4,
+        tipo_de_carroceria: 'Pick-up',
+        capacidade_de_passageiros: 5,
+        cor: 'Preto Carbon',
+}
 ]
    
 export const parts = [

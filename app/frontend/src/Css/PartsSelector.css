@@ -1,0 +1,43 @@
+/* Estilos para a lista de peças */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Estilos para as peças selecionadas */
+.selected-parts {
+  margin-top: 20px;
+}
+
+.selected-parts h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.selected-parts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.selected-parts li {
+  margin-bottom: 10px;
+}
+
+.selected-parts p {
+  font-weight: bold;
+  margin-top: 10px;
+}
