@@ -19,9 +19,10 @@ const Login = () => {
             // const data = await response.json();
 
             const data = clientUser;
+            const clientExists = data.filter((cpfs) => cpfs.cpf === cpf)
 
-            if (data.cpf === cpf) {
-                setClient(data);
+            if (clientExists[0]) {
+                setClient(clientExists[0]);
                 history.push('/info_client');
             } else {
                 alert('Cliente não encontrado');

@@ -17,6 +17,9 @@ const InfoClient = () => {
         setCar(data);
     // }, []);
 
+    //Como são variedades de carros e clientes, aqui pegamos os carros correspondetes a seus clientes
+    const carsClient = data.filter((cars) => cars.clientId === client.id)
+
     return (
         <div>
             <Header />
@@ -30,7 +33,7 @@ const InfoClient = () => {
             <div className="car-details">
                 <ul>
                     <h2>Detalhes do carro:</h2>
-                    {data.map((car) => (
+                    {carsClient.map((car) => (
                         <li key={car.id}>
                             <p>ID: {car.id}</p>
                             <p>Marca: {car.marca}</p>
@@ -40,7 +43,7 @@ const InfoClient = () => {
                             <p>Tipo de carroceria: {car.tipo_de_carroceria}</p>
                             <p>Capacidade de passageiros: {car.capacidade_de_passageiros}</p>
                             <p>Cor: {car.cor}</p>
-                        </li>
+                            </li>
                     ))}
                 </ul>
             </div>
