@@ -6,39 +6,38 @@ import '../Css/Login.css';
 
 const Login = () => {
     const history = useHistory();
-    const { setClient} = useContext(AppContext)
+    const { setClient } = useContext(AppContext);
     const [cpf, setCpf] = useState('');
 
-    const login = async (cpf) => {
-        // Aqui, podemos fazer uma requisição para um banco de dados para buscar o cliente com o cpf informados.
-        // Se o cliente for encontrado, podemos atualizar o estado do contexto com as informações dele e continuar o processo.
-        // Se não for encontrado, podemos mostrar uma mensagem de erro para o usuário.
-
+    const handleLogin = async (cpf) => {
         try {
+            // Aqui, podemos fazer uma requisição para um banco de dados para buscar o cliente com o cpf informados.
+            // Se o cliente for encontrado, podemos atualizar o estado do contexto com as informações dele e continuar o processo.
+            // Se não for encontrado, podemos mostrar uma mensagem de erro para o usuário.
+            
             // const response = await fetch(`/api/client?email=${email}&password=${password}`);
             // const data = await response.json();
 
             const data = clientUser;
 
             if (data.cpf === cpf) {
-                setClient(data)
-                history.push('/info_client')
+                setClient(data);
+                history.push('/info_client');
             } else {
-                alert('Cliente não encontrado')
-            }
+                alert('Cliente não encontrado');
+            };
         } catch (error) {
             console.error(error);
-        }
+        };
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        login(cpf);
+        handleLogin(cpf);
     };
 
 
     return (
-        <>
             <form className="login-form" onSubmit={handleSubmit}>
                 <label>
                     Cpf:
@@ -46,7 +45,6 @@ const Login = () => {
                 </label>
                 <button type="submit">Entrar</button>
             </form>
-        </>
     );
 };
 
