@@ -1,9 +1,11 @@
 import React, { useContext, useState } from 'react';
 import AppContext from '../Context/Context';
+import PartSelector from './PartsSelector';
 
 const ServiceForm = () => {
     const { client } = useContext(AppContext);
     const [name, setName] = useState('');
+    const [details, setDetails] = useState('');
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -19,7 +21,8 @@ const ServiceForm = () => {
                 },
                 body: JSON.stringify({
                     clientId: client.id,
-                    name
+                    name,
+                    details
                 })
             });
 
@@ -40,6 +43,13 @@ const ServiceForm = () => {
                 Nome da pessoa responsável pelo serviço:
                 <input type="text" value={name} onChange={(event) => setName(event.target.value)} required />
             </label>
+            <label>
+                Detalhes do serviço:
+                <textarea id="detalhes_service" cols="30" rows="10"
+                value={details} onChange={(event) => setDetails(event.target.value)}
+                ></textarea>
+            </label>
+            <PartSelector />
             <button type="submit">Confirmar serviço</button>
         </form>
     );

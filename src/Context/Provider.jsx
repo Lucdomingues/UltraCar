@@ -10,10 +10,13 @@ export default function AppProvider({ children }) {
         cpf: ''
     });
     const [car, setCar] = useState([]);
+    const [part, setPart] = useState({});
+    const [selectedParts, setSelectedParts] = useState([]);
+    const [total, setTotal] = useState(0);
 
     const data = useMemo(
-        () => ({ client, setClient, car, setCar }),
-        [client, setClient, car, setCar],
+        () => ({ client, setClient, car, setCar, part, setPart, selectedParts, setSelectedParts, total, setTotal }),
+        [client, setClient, car, setCar, part, setPart, selectedParts, setSelectedParts, total, setTotal],
     );
 
     return (
