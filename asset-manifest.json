@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/UltraCar/static/css/main.c1a6e154.css",
+    "main.js": "/UltraCar/static/js/main.7c52a580.js",
+    "index.html": "/UltraCar/index.html",
+    "main.c1a6e154.css.map": "/UltraCar/static/css/main.c1a6e154.css.map",
+    "main.7c52a580.js.map": "/UltraCar/static/js/main.7c52a580.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1a6e154.css",
+    "static/js/main.7c52a580.js"
+  ]
+}
