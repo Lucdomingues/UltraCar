@@ -13,10 +13,15 @@ function Header() {
         history.push('/')
     };
 
+    const handleHome = (event) => {
+        event.preventDefault();
+        history.push('/info_client')
+    }
+
     return (
         <header className="header">
             <div className="logo">
-                <img className="logo-image" onClick={() => history.push('/info_client')} src='https://ultracarweb.com/Imagens/logo_ultracar_slogan_front.png' alt="logo_ultracar" />
+                <img className="logo-image" onClick={(event) => handleHome(event)} src='https://ultracarweb.com/Imagens/logo_ultracar_slogan_front.png' alt="logo_ultracar" />
             </div>
             <div className="info">
                 <h1 className="title">Ultracar</h1>
