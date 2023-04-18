@@ -6,7 +6,7 @@ import '../Css/ServiceForm.css'
 
 const ServiceForm = () => {
     const history = useHistory();
-    const { services, setServices, selectedParts, total, client } = useContext(AppContext);
+    const { services, setServices, selectedParts, setSelectedParts, total, setTotal, setPart, client } = useContext(AppContext);
     const [name, setName] = useState('');
     const [details, setDetails] = useState('');
     const [id, setId] = useState(0);
@@ -17,30 +17,8 @@ const ServiceForm = () => {
         // Aqui, podemos fazer uma requisição para um banco de dados para salvar o nome da pessoa responsável pelo serviço.
         // Podemos enviar o nome junto com o ID do cliente, que foi obtido quando ele fez login na Tela 1.
 
-        // try {
-        //     const response = await fetch('/api/service', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         },
-        //         body: JSON.stringify({
-        //             clientId: client.id,
-        //             name,
-        //             details
-        //         })
-        //     });
-
-        //     if (response.ok) {
-        //         alert('Serviço confirmado com sucesso!');
-        //     } else {
-        //         alert('Erro ao confirmar o serviço');
-        //         throw new Error('Erro ao confirmar o serviço');
-        //     }
-        // } catch (error) {
-        //     console.error(error);
-        // }
-
         gerarServices();
+        clearInfoSelected();
     };
 
     const gerarServices = () => {
@@ -54,6 +32,12 @@ const ServiceForm = () => {
         }
 
         setServices([...services, serviceData]);
+    }
+
+    const clearInfoSelected = () => {
+        setSelectedParts([]);
+        setTotal(0);
+        setPart({});
     }
 
     const redirect = () => {
