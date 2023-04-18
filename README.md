@@ -64,15 +64,39 @@
 
 
 <!-- SOBRE O PROJETO -->
-## Sobre o projeto
+# Sobre o projeto
 
-Nesse projeto, a pessoa que estiver utilizando o app pode procurar uma receita específica, explorar receitas baseado em diferentes critérios, favoritar e fazer as receitas, entre outras funcionalidades.
+## Projeto de Gerenciamento de Serviços
 
-As telas sofrem variações dependendo do tipo da receita (se é comida ou bebida, no caso).
+Este projeto foi desenvolvido visando boa prática de programação e __clean code__, onde a aplicação é composta por diferentes componentes. Para a construção do __Front-end__, foi utilizado o framework __React.js__ juntamente com __Context Api__ para gerenciar o estado global.
 
-A base de dados são 2 APIs distintas, uma para comidas e outra para bebidas.
+## Dificultades
 
-O layout tem como foco dispositivos móveis, por conta disso todos os protótipos estão disponíveis em telas menores.
+O objetivo era a implementação de uma funcionalidade de QrCode para validar e retornar os dados do cliente, não achei uma melhor forma de implementar isso por agora, por isso achei uma outra forma de identificação rápida, que é por meio do cpf, mais gostaria muito de aprender mais sobre a implementação de QrCode's, ficaría bem completa a aplicação!
+
+## Funcionalidades
+
+A aplicação é formada apenas por um Front-end, devido ao tempo proposto, mas está bem funcional, sendo capaz de realizar as seguintes funcionalidades:
+
+- Identificar um cliente pelo seu cpf (que já deve estar salvo no banco de dados), ocorrerá uma validação se o cliente realmente está cadastrado;
+- Será redirecionado para a tela do cliente onde o funcionário será capaz de ver as informações do cliente, como (dados do cliente e dos carros em sua posse)
+- Nessa mesma tela o funcionário será capaz de adicionar um serviço, incluindo peças se necessário;
+- Cada peça contém seu próprio valor;
+- Ao clicar no botão Serviços, o funcionario será redirecionado para a tela de serviços, onde poderá visualizar todos os serviços inicializados como os finzalizados;
+- O funcionario poderá confirmar o serviço e finaliza-lo, recebendo a data de conclusão e de término;
+- Caso queira gerenciar os serviços de outro cliente, basta clicar em logout no Header da página, o funcionário será direcionado para a tela de identificação, onde poderá começar o processo novamente;
+
+## ATENÇÃO: Por conta da falta de um back-end, os dados são mocks, ou seja, essa aplicação é com fins demostrativos de um front-end!
+
+### Para se identificar na tela de identificação use o cpf:
+- 197.201.358.40
+
+### CPF's exclusivos, para os seguintes clientes:
+
+- __Patricia Magi__: 123.456.789-10;
+- __Jonathan Cristian__: 987.654.321-12;
+- __Genesis Pereira__: 111.222.333-44;
+- __Wilson Salles__: 555.444.333-22;
 
 
 <p align="right">(<a href="#readme-top">de volta para o topo</a>)</p>
